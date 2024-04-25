@@ -1,24 +1,13 @@
 package bancodigital;
 
 public class ContaPoupanca extends Conta {
-	private static int SEQUENCIAL = 1;
-	public ContaPoupanca() {
-		super.agencia = 1;
-		super.numero = SEQUENCIAL++;
-	}
+
+	
 	@Override
-	public void sacar(double valor) {
-		// TODO Auto-generated method stub
-		
+	public String toString() {
+		StringBuilder info = new StringBuilder("\nConta Poupança {\n");
+		info.append(super.toString()).append("\n}");
+		return info.toString();
 	}
-	@Override
-	public void depositar(double valor) {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void transferir(double valor, Conta contaDestino) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 }

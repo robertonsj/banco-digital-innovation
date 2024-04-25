@@ -1,9 +1,14 @@
 package bancodigital;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Banco {
-	private String nome;
+	private String nome = "Banco RB";
+	public List<Conta> lista;
 	
-	public Banco(String nome) {
-		this.nome = nome;
+	public Banco() {
+		this.lista = new ArrayList();
 	}
+	
 }
