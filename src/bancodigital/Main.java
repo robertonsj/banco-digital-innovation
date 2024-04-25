@@ -13,6 +13,14 @@ public class Main {
 		for(Conta conta : banco.lista) {
 			System.out.println(conta.toString());
 		}
+                
+                banco.lista.get(0).sacar(100);
+                banco.lista.get(0).depositar(200);
+                System.out.println(banco.lista.get(0).toString());
+                
+                banco.lista.get(0).transferir(50, banco.lista.get(1));
+                System.out.println(banco.lista.get(0).toString());
+                System.out.println(banco.lista.get(1).toString());
 	}
 
 }
