@@ -8,34 +8,27 @@ public abstract class Conta implements AccountOperations {
 	protected int agencia;
 	protected int conta;
 	protected double saldo;
+	protected Cliente cliente;
+	
+	
 	
 	public Conta() {
-		super();
 		this.agencia = AGENCIA_PADRAO;
 		this.conta = ++SEQUENCIAL;
 		this.saldo = 0.0;
 	}
 	
-	public int getAgencia() {
-		return agencia;
-	}
-	public int getNumero() {
-		return conta;
-	}
-	public double getSaldo() {
-		return saldo;
-	}
-	
-	
 
 	@Override
 	public void sacar(double valor) {
 		// TODO Auto-generated method stub
-            if(valor <= this.getSaldo()){
+            if(valor <= this.saldo){
                 saldo -= valor;
-                System.out.println("\t*** O valor de R$" + valor + " foi debitado.");
+                System.out.println("\t*** O valor de R$" + valor 
+                		+ " foi debitado da sua conta, " + this.cliente);
              } else {
-                System.out.println("\t*** O valor de R$" + valor + " não foi debitado.");
+                System.out.println("\t*** O valor de R$" + valor 
+                		+ " não foi debitado da sua conta, " + this.cliente);
              }
 	}
 
@@ -43,7 +36,8 @@ public abstract class Conta implements AccountOperations {
 	public void depositar(double valor) {
 		// TODO Auto-generated method stub
             saldo += valor;
-            System.out.println("\t*** Deposito de R$" + valor + " realizado!");
+            System.out.println("\t*** O valor de R$" + valor 
+            		+ " foi creditado na sua conta, " + this.cliente);
 	}
 
 	@Override
@@ -56,7 +50,8 @@ public abstract class Conta implements AccountOperations {
 
 	@Override
 	public String toString() {
-		return "[agencia=" + agencia + ", conta=" + conta + ", saldo=" + saldo + "]";
+		return "[agencia=" + agencia + ", conta=" + conta + ", saldo=" + saldo + 
+				", nome=" + cliente +"]";
 	}
 
 	

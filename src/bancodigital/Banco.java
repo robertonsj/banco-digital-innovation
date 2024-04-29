@@ -5,10 +5,14 @@ import java.util.List;
 
 public class Banco {
 	private String nome = "Banco RB";
-	public List<Conta> lista;
+	public List<Conta> contas;
 	
 	public Banco() {
-		this.lista = new ArrayList();
+		this.contas = new ArrayList();
+	}
+	@Override
+	public String toString() {
+		return this.nome;
 	}
 	
 }
