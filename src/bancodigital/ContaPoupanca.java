@@ -3,9 +3,9 @@ package bancodigital;
 public class ContaPoupanca extends Conta {
 
 	
-	public ContaPoupanca(String nome) {
+	public ContaPoupanca(Cliente cliente) {
 		// TODO Auto-generated constructor stub
-		super.cliente = new Cliente(nome);
+		this.cliente = cliente;
 	}
 
 
