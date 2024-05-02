@@ -11,6 +11,9 @@
 - Users can check their account balance.
 - Users can transfer funds between their accounts or to other users' accounts.
 
+## Diagram class
+![class diagram](class-diagram.png)
+
 ## Object-Oriented Concepts
 ### Polymorphism:
 - Implement different types of accounts (e.g., savings account, checking account) as subclasses of a common superclass (e.g., Account).
@@ -24,5 +27,3 @@
 - Utilize inheritance to create specialized account types that inherit common behavior from a base account class.
 - For example, a savings account may inherit from a general account class and override methods for interest calculation.
 
-## Diagram class
-![class diagram](class-diagram.png)
