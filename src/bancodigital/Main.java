@@ -9,9 +9,10 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		List<User> users = new ArrayList<>();
-		
+
 		users.add(new User("Roberto", new ContaCorrente(2000)));
 		users.get(0).setCredentials("roberto111", "123");
 		

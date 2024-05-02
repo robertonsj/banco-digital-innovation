@@ -14,6 +14,7 @@ public abstract class Conta implements AccountOperations {
 		this.agencia = AGENCIA_PADRAO;
 		this.conta = ++SEQUENCIAL;
 		this.saldo = saldo;
+
 	}
 	
 
@@ -59,6 +60,4 @@ public abstract class Conta implements AccountOperations {
 		return "\t[agencia=" + agencia + ", conta=" + conta + ", saldo=" + saldo;
 	}
 
-	
-	
 }
