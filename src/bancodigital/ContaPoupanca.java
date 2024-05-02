@@ -3,16 +3,14 @@ package bancodigital;
 public class ContaPoupanca extends Conta {
 
 	
-	public ContaPoupanca(String nome) {
+	public ContaPoupanca(double saldo) {
+		super(saldo);
 		// TODO Auto-generated constructor stub
-		super.cliente = new Cliente(nome);
 	}
-
 
 	@Override
 	public String toString() {
-		StringBuilder info = new StringBuilder("Conta Poupança {\n");
-		info.append(super.toString()).append("\n}");
+		StringBuilder info = new StringBuilder(super.toString() + ", tipo=poupanca]");
 		return info.toString();
 	}
 	

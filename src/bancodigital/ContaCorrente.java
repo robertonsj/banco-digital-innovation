@@ -2,16 +2,16 @@ package bancodigital;
 
 public class ContaCorrente extends Conta{
 
-	
-	public ContaCorrente(String nome) {
-		// TODO Auto-generated constructor stub
-		super.cliente = new Cliente(nome);
-	}
 
+
+	public ContaCorrente(double saldo) {
+		super(saldo);
+		// TODO Auto-generated constructor stub
+	}
+	
 	@Override
 	public String toString() {
-		StringBuilder info = new StringBuilder("Conta Corrente {\n");
-		info.append(super.toString()).append("\n}");
+		StringBuilder info = new StringBuilder(super.toString() + ", tipo=corrente]");
 		return info.toString();
 	}
 
